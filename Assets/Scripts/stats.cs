@@ -89,13 +89,13 @@ public class stats : MonoBehaviour
         if(monster == true)
         {
             for (int i = 0; i < MonsterStrength; i++)
-                x += i;
+                x += i/2;
         }
         
         if(monster == false)
         {
             for (int i = 0; i < TowerStrength; i++)
-                x += i;
+                x += i/2;
         }
 
         return x;
