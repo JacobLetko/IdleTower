@@ -79,7 +79,7 @@ public class stats : MonoBehaviour
     public void Income(int Strength, float Alive)
     {
         Cash += (int)Mathf.Round(Strength / 2);
-        Science += Mathf.Round((Alive / 100f) * 100) / 100;
+        Science += Mathf.Round((Alive) * 100) / 100;
     }
 
     public int CalCost(bool monster)
@@ -89,13 +89,13 @@ public class stats : MonoBehaviour
         if(monster == true)
         {
             for (int i = 0; i < MonsterStrength; i++)
-                x += i/2;
+                x += (i / 2) / 4;
         }
         
         if(monster == false)
         {
             for (int i = 0; i < TowerStrength; i++)
-                x += i/2;
+                x += (i/2) / 4;
         }
 
         return x;
